@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Transactionlist from './Transactionlist';
 import NewTransactionForm from './NewTransactionForm';
-import TransactionFilter from './TransactionFilter';
 
 function App() {
 
@@ -18,8 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>BANK-OF-FLATIRON</h1>
-      <TransactionFilter/>
+      <h1>BANK OF FLATIRON</h1>
       <NewTransactionForm/>
       <Transactionlist 
       transactions={transactions}/>

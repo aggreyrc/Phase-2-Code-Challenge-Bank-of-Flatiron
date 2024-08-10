@@ -20,7 +20,7 @@ function NewTransactionForm(){
                 Amount:
                 <input type="number" name="amount"/>
             </label>
-            <input type="submit" value="Submit"/>
+            <input type="submit" value="Add"/>
         </form>
     )
 }
