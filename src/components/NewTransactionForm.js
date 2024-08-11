@@ -1,29 +1,24 @@
-import React, {useState} from "react";
+import React from "react";
 
-function NewTransactionForm(){
-
-    const [date, setDate] = useState("")
-    const [description, setDescription] = useState("")
-    const [category, setCategory] = useState("")
-    const [amount, setAmount] = useState("")
+function NewTransactionForm({date,description,category,amount,handleDate,handleDescription,handleCategory,handleAmount,handleSubmit}){
 
     return(
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
             <label>
                 Date:
-                <input type="date" name="date" onChange={handleDate}/>
+                <input type="date" name="date" onChange={handleDate} value={date}/>
             </label>
             <label>
                 Description:
-                <input type="text" name="description" onChange={handleDescription}/>
+                <input type="text" name="description" onChange={handleDescription} value={description}/>
             </label>
             <label>
                 Category:
-                <input type="text" name="category" onChange={handleCategory}/>
+                <input type="text" name="category" onChange={handleCategory} value={category}/>
             </label>
             <label>
                 Amount:
-                <input type="number" name="amount" onChange={handleAmount}/>
+                <input type="number" name="amount" onChange={handleAmount} value={amount}/>
             </label>
             <input type="submit" value="Add"/>
         </form>
