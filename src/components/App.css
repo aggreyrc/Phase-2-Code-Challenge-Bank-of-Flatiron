@@ -1,65 +1,94 @@
+/* General App Styling */
 .App {
   text-align: center;
+  background-color: #010120;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
 }
 
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App {
+  background-color: #1b1e24;
+  padding: 20px;
   color: white;
+  border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.App h1 {
+  font-size: 2em;
+  margin: 0;
+  color: #97872e88;
 }
 
-.transaction-table {
-  border-collapse: collapse;
-  width: 100%;
-
-}
-
-.transaction-table th, .transaction-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: center;
-}
-
-.transaction-table th {
-  background-color: #f0f0f0;
-  font-weight: bold;
-  text-align: center;
-}
-
-.transaction-table tr {
-  border-bottom: 1px solid #ccc;
-}
-
-.transaction-table thead {
-  background-color: #f0f0f0;
-  border-bottom: 1px solid #ccc;
-}
-
-.transaction-table th {
-  padding: 10px;
-  text-align: center;
-}
-.transaction{
-  text-align: center;
-}
-
-.transaction-table td {
-  padding: 10px;
-  background-color: #f0f0f0;
-  text-align: center;
-}
 
 .filter {
   margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
+
+.filter input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 3px solid #ddd;
+  font-size: 1em;
+  width: 200px;
+}
+
+.filter input[type="date"], 
+.filter input[type="text"] {
+  width: auto;
+}
+
+
+/* Transaction Table Styling */
+.transaction-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-table th, .transaction-table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.transaction-table th {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+}
+
+.transaction-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.transaction-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.transaction-table td {
+  font-size: 1em;
+  color: #333;
+}
+
+.form {
+  padding: 15px;
+  padding-left: 5px;
+}
+
+.form label {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 5px;
+  color: #f8f6f6;
+}
+
+

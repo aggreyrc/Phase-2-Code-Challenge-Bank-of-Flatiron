@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Transaction from "./Transaction";
 import TransactionFilter from "./TransactionFilter";
 
 function Transactionlist({ transactions }) {
+    
   //searching by description
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -23,7 +23,7 @@ function Transactionlist({ transactions }) {
       <TransactionFilter handleSearch={handleSearch} />
       <table className="transaction-table">
         <thead>
-          <tr >
+          <tr>
             <th>Transaction ID</th>
             <th>Transaction Date</th>
             <th>Description</th>
@@ -39,13 +39,6 @@ function Transactionlist({ transactions }) {
               <td>{transaction.description}</td>
               <td>{transaction.category}</td>
               <td>{transaction.amount}</td>
-              <Transaction
-                id={transaction.id}
-                date={transaction.date}
-                description={transaction.description}
-                category={transaction.category}
-                amount={transaction.amount}
-              />
             </tr>
           ))}
         </tbody>
