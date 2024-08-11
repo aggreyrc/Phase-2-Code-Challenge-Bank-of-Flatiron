@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Transactionlist from './Transactionlist';
 import NewTransactionForm from './NewTransactionForm';
+import {v4 as uuidv4} from 'uuid'
 
 function App() {
 
@@ -39,8 +40,7 @@ function App() {
 
   function handleSubmit(e){
     e.preventDefault();
-    const lastTransactionId = transactions.length > 0 ? transactions[transactions.length - 1].id : 0;
-    const newTransactionId = lastTransactionId + 1;
+    const newTransactionId = transactions.length +1
     const newTransaction = {
       id: newTransactionId,
       date: date, 
